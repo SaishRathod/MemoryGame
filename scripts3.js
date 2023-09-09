@@ -1,19 +1,27 @@
 const cards = [
     {
-        name: "HTML",
-        img: "Images/html.png",
+        name: "Wikipedia",
+        img: "Images/wikipedia.png",
     },
     {
-        name: "CSS",
-        img: "Images/css.png",
+        name: "Udemy",
+        img: "Images/udemy.png",
     },
     {
-        name: "Javascript",
-        img: "Images/js.png",
+        name: "Unacademy",
+        img: "Images/unacademy.png",
     },
     {
-        name: "React.js",
-        img: "Images/react.png",
+        name: "Geeksforgeeks",
+        img: "Images/gg.png",
+    },
+    {
+        name: "PhysicsWallah",
+        img: "Images/pw.png",
+    },
+    {
+        name: "Byjus",
+        img: "Images/byjus.png",
     }
 ];
 
@@ -57,7 +65,7 @@ const card_match = () => {
     const allCardsMatched = document.querySelectorAll('.card-match').length === cards.length * 2;
     
     if (allCardsMatched) {
-        window.location.href = 'explain1.html';
+        window.location.href = 'explain2.html';
     }
 }
 
@@ -104,12 +112,3 @@ parentDiv.addEventListener('click', (event) => {
         return false;
     }
 });
-
-
-
-
-
-
-
-
-  

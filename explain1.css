@@ -1,0 +1,32 @@
+/* Global styles for the entire document */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Style the heading */
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Style the images */
+img {
+    max-width: 150px;
+    height: auto;
+    margin: 20px 0;
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+/* Style the paragraphs */
+p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+

@@ -1,19 +1,27 @@
 const cards = [
     {
-        name: "HTML",
-        img: "Images/html.png",
+        name: "W3Schools",
+        img: "Images/w3schools.png",
     },
     {
-        name: "CSS",
-        img: "Images/css.png",
+        name: "Stackoverflow",
+        img: "Images/stackoverflow.png",
     },
     {
-        name: "Javascript",
-        img: "Images/js.png",
+        name: "Hackerank",
+        img: "Images/hackerank.png",
     },
     {
-        name: "React.js",
-        img: "Images/react.png",
+        name: "Leetcode",
+        img: "Images/leetcode.png",
+    },
+    {
+        name: "GitHub",
+        img: "Images/github.png",
+    },
+    {
+        name: "FreeCodeCamp",
+        img: "Images/freecodecamp.png",
     }
 ];
 
@@ -57,7 +65,7 @@ const card_match = () => {
     const allCardsMatched = document.querySelectorAll('.card-match').length === cards.length * 2;
     
     if (allCardsMatched) {
-        window.location.href = 'explain1.html';
+        window.location.href = 'explain2.html';
     }
 }
 
@@ -104,12 +112,3 @@ parentDiv.addEventListener('click', (event) => {
         return false;
     }
 });
-
-
-
-
-
-
-
-
-  

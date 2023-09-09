@@ -1,19 +1,23 @@
 const cards = [
     {
-        name: "HTML",
-        img: "Images/html.png",
+        name: "Express",
+        img: "Images/express.png",
     },
     {
-        name: "CSS",
-        img: "Images/css.png",
+        name: "Flask",
+        img: "Images/flask.png",
     },
     {
-        name: "Javascript",
-        img: "Images/js.png",
+        name: "Nodejs",
+        img: "Images/node.png",
     },
     {
-        name: "React.js",
-        img: "Images/react.png",
+        name: "Django",
+        img: "Images/django.png",
+    },
+    {
+        name: "MongoDB",
+        img: "Images/mongoDB.png",
     }
 ];
 
@@ -57,7 +61,7 @@ const card_match = () => {
     const allCardsMatched = document.querySelectorAll('.card-match').length === cards.length * 2;
     
     if (allCardsMatched) {
-        window.location.href = 'explain1.html';
+        window.location.href = 'explain2.html';
     }
 }
 
@@ -104,12 +108,3 @@ parentDiv.addEventListener('click', (event) => {
         return false;
     }
 });
-
-
-
-
-
-
-
-
-  
