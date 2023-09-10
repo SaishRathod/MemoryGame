@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #060b28;
+}
+
+#game-title {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+h1 {
+  font-size: 80px;
+  position: absolute;
+  color: white;
+}
+
+h2 {
+  font-size: 40px;
+  color: white;
+  margin-bottom: 15px;
+  /* margin-left: 50px;
+  margin-top: 20px; */
+}
+
+.home-page-body {
+  display: grid;
+  margin-top: 150px;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 5fr 1fr;
+  gap: 20px;
+}
+
+.button-class {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+/* .highscore {
+  display: flex;
+  justify-content: center;
+} */
+
+.highscore p {
+  position: absolute;
+  color: white;
+  padding-left: 30px;
+}
+
+p {
+  color: white;
+  font-size: 30px;
+}
+
+.rules {
+  padding: 30px;
+  border-radius: 2rem;
+  box-shadow: 2rem 2rem 98rem -1rem rgba(111, 203, 253, 0.44);
+}
+
+.rules li {
+  font-size: 30px;
+  color: white;
+}
+
+.rules ul {
+  margin: 2vw;
+}
+
+button {
+  height: 40px;
+  width: 100px;
+  background-color: white;
+  color: #060b28;
+}
