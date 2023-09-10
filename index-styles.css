@@ -9,6 +9,7 @@ body {
 }
 
 #game-title {
+  margin-top: 30px;
   display: flex;
   position: relative;
   justify-content: center;
@@ -19,7 +20,19 @@ body {
 h1 {
   font-size: 80px;
   position: absolute;
-  color: white;
+  background: linear-gradient(
+    88.51deg,
+    #92dcfb 8.64%,
+    rgba(181, 87, 214, 0.75) 98.39%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.5rem;
+  text-align: center;
 }
 
 h2 {
@@ -54,7 +67,7 @@ h2 {
 .highscore p {
   position: absolute;
   color: white;
-  padding-left: 30px;
+  padding-left: 70px;
 }
 
 p {
@@ -78,8 +91,14 @@ p {
 }
 
 button {
-  height: 40px;
-  width: 100px;
-  background-color: white;
-  color: #060b28;
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: bolder;
+  padding: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #66fc00;
+  color: white;
+  border-radius: 7%;
+  border: none;
 }

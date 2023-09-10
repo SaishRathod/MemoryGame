@@ -1,0 +1,60 @@
+/* Global styles for the entire document */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #060b28;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Style the heading */
+h1 {
+  font-size: 3rem;
+  color: white;
+  margin-top: 20px;
+  text-decoration: underline;
+  text-underline-offset: 10%;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+  color: rgb(0, 212, 212);
+}
+
+/* Style the images */
+img {
+  max-width: 150px;
+  height: auto;
+  margin: 20px;
+  margin-bottom: 15px;
+  border: 2px solid #7a7070;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 2rem 2rem 98rem -1rem rgba(111, 203, 253, 0.44);
+}
+
+/* Style the paragraphs */
+p {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.logo-item {
+  margin-bottom: 60px;
+}
+
+button {
+  margin: 20px;
+  font-size: 30px;
+  font-weight: bolder;
+  padding: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #66fc00;
+  color: white;
+  border-radius: 7%;
+  border: none;
+}
