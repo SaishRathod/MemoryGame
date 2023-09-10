@@ -1,5 +1,0 @@
-Find better logo for byjus, udemy, geeks for geeks
-result.html
-round-title
-button animation
-card flip animation

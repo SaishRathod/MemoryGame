@@ -20,6 +20,11 @@ body {
   background-color: #060b28;
 }
 
+.main-ul {
+  list-style: none;
+  padding-left: 0;
+}
+
 .round-title {
   position: absolute;
   display: flex;
@@ -62,6 +67,7 @@ body {
 
 button {
   margin: 20px;
+  margin-top: 40px;
   font-size: 30px;
   font-weight: bolder;
   padding: 20px;
