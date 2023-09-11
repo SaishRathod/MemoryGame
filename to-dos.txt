@@ -1,0 +1,4 @@
+fix card logo alignment
+hide round-title 
+button animation
+card flip animation

@@ -1,27 +1,19 @@
 const cards = [
   {
-    name: "W3Schools",
-    img: "Images/w3schools.png",
+    name: "HTML",
+    img: "Images/html.png",
   },
   {
-    name: "Stackoverflow",
-    img: "Images/stackoverflow.png",
+    name: "CSS",
+    img: "Images/css.png",
   },
   {
-    name: "Hackerank",
-    img: "Images/hackerank.png",
+    name: "Javascript",
+    img: "Images/js.png",
   },
   {
-    name: "Leetcode",
-    img: "Images/leetcode.png",
-  },
-  {
-    name: "GitHub",
-    img: "Images/github.png",
-  },
-  {
-    name: "FreeCodeCamp",
-    img: "Images/freecodecamp.png",
+    name: "React.js",
+    img: "Images/react.png",
   },
 ];
 
@@ -79,7 +71,7 @@ const card_match = () => {
     document.querySelectorAll(".card-match").length === cards.length * 2;
 
   if (allCardsMatched) {
-    window.location.href = "explain4.html";
+    window.location.href = "explain1.html";
   }
 };
 
@@ -103,6 +95,7 @@ parentDiv.addEventListener("click", (event) => {
   }
 
   clickCount++;
+
   if (clickCount < 3) {
     if (clickCount === 1) {
       firstcard = currCard.parentNode.dataset.name;
