@@ -41,6 +41,11 @@ body {
   color: white;
 }
 
+p {
+  font-size: 2rem;
+  color: white;
+}
+
 .container {
   display: flex;
   justify-content: center;

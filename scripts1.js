@@ -20,8 +20,32 @@ const cards = [
 let gameStarted = false;
 const startButton = document.getElementById("start-button");
 
+let time=0;
+let timerElement = document.getElementById('timer');
+let timerInterval;
+let timerRunning=false;
+
+function startTimer() {
+  timerInterval = setInterval(function () {
+      time++;
+      timerElement.textContent = `Time: ${time}`;
+      timerElement.style.color="white";
+      timerElement.style.fontSize="2rem";
+  }, 1000);
+  timerRunning = true;
+}
+
+function stopTimer() {
+  clearInterval(timerInterval);
+  timerRunning = false;
+  return time;
+}
+
 startButton.addEventListener("click", () => {
   if (!gameStarted) {
+    if(!timerRunning){
+      startTimer();
+    }
     const parentDiv = document.querySelector(".container");
     const roundTitle = document.getElementById("round-title");
 
@@ -71,6 +95,8 @@ const card_match = () => {
     document.querySelectorAll(".card-match").length === cards.length * 2;
 
   if (allCardsMatched) {
+    stopTimer();
+    localStorage.setItem("round1", time);
     window.location.href = "explain1.html";
   }
 };
@@ -119,3 +145,4 @@ parentDiv.addEventListener("click", (event) => {
     }
   }
 });
+

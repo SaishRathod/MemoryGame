@@ -28,8 +28,43 @@ const cards = [
 let gameStarted = false;
 const startButton = document.getElementById("start-button");
 
+let timerElement;
+let time = 0;
+let timerInterval;
+let timerRunning = false;
+
+const round3 = localStorage.getItem("round3");
+
+if (round3) {
+    time = parseInt(round3, 10);
+}
+
+function startTimer() {
+    timerInterval = setInterval(function () {
+        time++;
+        timerElement.textContent = `Time: ${time} seconds`;
+    }, 1000);
+    timerRunning = true;
+}
+
+function stopTimer() {
+    clearInterval(timerInterval);
+    timerRunning = false;
+    return time;
+}
+
+window.onload = function () {
+    timerElement = document.getElementById('timer');
+    timerElement.textContent = `Round 3 Time: ${time} seconds`;
+    timerElement.style.color="white";
+    timerElement.style.fontSize="2rem";
+}
+
 startButton.addEventListener("click", () => {
   if (!gameStarted) {
+    if(!timerRunning){
+      startTimer();
+    }
     const parentDiv = document.querySelector(".container");
     const roundTitle = document.getElementById("round-title");
 
@@ -79,6 +114,8 @@ const card_match = () => {
     document.querySelectorAll(".card-match").length === cards.length * 2;
 
   if (allCardsMatched) {
+    stopTimer();
+    localStorage.setItem("round4", time);
     window.location.href = "explain4.html";
   }
 };

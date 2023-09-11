@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Memory Game</title>
     <link rel="stylesheet" href="./results-styles.css" />
   </head>
@@ -14,14 +17,16 @@
       <ul class="main-ul">
         <h1>Your Results:</h1>
         <ul>
-          <li>Score:</li>
-          <li>Time Taken:</li>
-          <li>Best Time:</li>
+          <li>Score: <span id="score"></span></li>
+          <li>Time Taken: <span id="time-taken"></span> seconds</li>
+          <li>Best Time: <span id="best-time"></span> seconds</li>
         </ul>
         <a href="./index.html">
-          <button id="homepage-button">Return to Homepage</button></a
-        >
+          <button id="homepage-button">Return to Homepage</button>
+        </a>
       </ul>
+      <script src="./score.js"></script>
     </div>
   </body>
 </html>
+
