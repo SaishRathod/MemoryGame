@@ -31,6 +31,7 @@ const startButton = document.getElementById("start-button");
 startButton.addEventListener("click", () => {
   if (!gameStarted) {
     const parentDiv = document.querySelector(".container");
+    const roundTitle = document.getElementById("round-title");
 
     const gameCard = cards.concat(cards);
 
@@ -40,11 +41,23 @@ startButton.addEventListener("click", () => {
       const childDiv = document.createElement("div");
       childDiv.classList.add("card");
       childDiv.dataset.name = shuffled[i].name;
-      childDiv.style.backgroundImage = `url(${shuffled[i].img})`;
+      //   childDiv.style.backgroundImage = `url(${shuffled[i].img})`; remove
+
+      const front_div = document.createElement("div");
+      front_div.classList.add("front-card");
+
+      const back_div = document.createElement("div");
+      back_div.classList.add("back-card");
+
+      back_div.style.backgroundImage = `url(${shuffled[i].img})`;
 
       parentDiv.appendChild(childDiv);
+
+      childDiv.appendChild(front_div);
+      childDiv.appendChild(back_div);
     }
     startButton.style.display = "none";
+    roundTitle.style.display = "none";
     gameStarted = true;
   }
 });
@@ -84,14 +97,19 @@ const resetGame = () => {
 
 parentDiv.addEventListener("click", (event) => {
   let currCard = event.target;
+
+  if (currCard.className === "container") {
+    return false;
+  }
+
   clickCount++;
   if (clickCount < 3) {
     if (clickCount === 1) {
-      firstcard = currCard.dataset.name;
-      currCard.classList.add("card-selected");
+      firstcard = currCard.parentNode.dataset.name;
+      currCard.parentNode.classList.add("card-selected");
     } else if (clickCount === 2) {
-      secondcard = currCard.dataset.name;
-      currCard.classList.add("card-selected");
+      secondcard = currCard.parentNode.dataset.name;
+      currCard.parentNode.classList.add("card-selected");
     }
 
     if (firstcard !== "" && secondcard !== "") {
@@ -106,9 +124,5 @@ parentDiv.addEventListener("click", (event) => {
         }, 600);
       }
     }
-  }
-
-  if (currCard.className === "container") {
-    return false;
   }
 });

@@ -79,3 +79,39 @@ button {
   list-style: none;
   padding-left: 0;
 }
+
+@media (min-width: 320px) and (max-width: 420px) {
+  .ty {
+    margin-top: 7rem;
+  }
+
+  .ty h1 {
+    font-size: 2.5rem;
+  }
+
+  .round-title {
+    margin: 1.5rem;
+    margin-top: 6rem;
+  }
+
+  .round-title h1 {
+    font-size: 2rem;
+  }
+
+  body > div.round-title > ul > ul > li {
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  body > div.home-page-body > div.rules > ul > li {
+    font-size: 1.5rem;
+    line-height: 120%;
+  }
+
+  button {
+    font-size: 25px;
+    padding: 15px;
+  }
+}

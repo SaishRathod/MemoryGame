@@ -58,3 +58,50 @@ button {
   border-radius: 7%;
   border: none;
 }
+
+@media (min-width: 320px) and (max-width: 420px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+    width: 100vw;
+    /* text-align: center; */
+  }
+
+  .main-div {
+    position: relative;
+  }
+  img {
+    height: 7rem;
+    width: 7rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    width: 100vw;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    width: 100vw;
+  }
+
+  button {
+    font-size: 20px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 2rem;
+  }
+
+  .container {
+    margin-top: 33rem;
+    margin-bottom: 10rem;
+  }
+}

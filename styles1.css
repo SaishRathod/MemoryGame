@@ -6,7 +6,7 @@
 
 :root {
   --bg-main: white;
-  --bg-card: aqua;
+  --bg-card: #696969;
   --border-color: #efc745;
 }
 
@@ -20,9 +20,10 @@ body {
   background-color: #060b28;
 }
 
-.round-title {
+#round-title {
   position: absolute;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 30px;
@@ -30,33 +31,68 @@ body {
   box-shadow: 2rem 2rem 98rem -1rem rgba(111, 203, 253, 0.44);
 }
 
-.round-title h1 {
+#round-title h1 {
   font-size: 3rem;
   color: white;
 }
 
 .container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .card {
-  width: 10rem;
+  position: relative;
+  transition: all 0.4s linear;
+  transform-style: preserve-3d;
+  margin: 1rem;
+}
+
+.card,
+.back-card,
+.front-card {
   height: 12rem;
-  background-color: var(--bg-card);
+  width: 10rem;
+}
+
+.back-card,
+.front-card {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front-card {
   background-size: contain;
   border-radius: 0.6rem;
+  border: 5px solid white;
+  background-color: black;
+  background-image: url("./images/ieee2.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 2rem;
+}
+
+.back-card {
+  transform: rotateY(180deg);
+  /* background-color: #6589f9; */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   padding: 2rem;
 }
 
 .card-selected {
-  border: 0.2rem solid var(--border-color);
+  transform: rotateY(180deg);
 }
 
-.card-match {
-  border: 0.2rem solid purple;
+.card-match .front-card {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 1s linear;
 }
 
 button {
@@ -70,4 +106,43 @@ button {
   color: white;
   border-radius: 7%;
   border: none;
+}
+
+@media (min-width: 320px) and (max-width: 420px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #round-title {
+    margin: 1.5rem;
+    margin-right: 4.5rem;
+  }
+
+  #round-title h1 {
+    font-size: 1.3rem;
+    color: white;
+  }
+
+  button {
+    font-size: 20px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 0;
+  }
+
+  .container {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+  }
+
+  .card,
+  .back-card,
+  .front-card {
+    height: 10rem;
+    width: 8rem;
+  }
 }

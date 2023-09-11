@@ -1,4 +1,4 @@
 fix card logo alignment
-round-title
+hide round-title 
 button animation
 card flip animation

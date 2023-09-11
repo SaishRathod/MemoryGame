@@ -44,11 +44,11 @@ h2 {
 }
 
 .home-page-body {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-top: 150px;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 5fr 1fr;
-  gap: 20px;
 }
 
 .button-class {
@@ -101,4 +101,33 @@ button {
   color: white;
   border-radius: 7%;
   border: none;
+}
+
+@media (min-width: 320px) and (max-width: 420px) {
+  #game-title {
+    margin-top: 7rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-page-body {
+    margin: 1.5rem;
+    margin-top: 6rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  body > div.home-page-body > div.rules > ul > li {
+    font-size: 1.5rem;
+    line-height: 120%;
+  }
+
+  button {
+    font-size: 25px;
+    padding: 15px;
+  }
 }
